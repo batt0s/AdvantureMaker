@@ -63,7 +63,7 @@ func ArcHanlder(w http.ResponseWriter, req *http.Request) {
 func loadArcs() map[string]Arc {
 	data, err := os.ReadFile("story.json")
 	if err != nil {
-		log.Fatalf("Can't read gopher.json\nError : %s", err.Error())
+		log.Fatalf("Can't read story.json\nError : %s", err.Error())
 	}
 	AllArcs := make(map[string]Arc)
 	if err = json.Unmarshal(data, &AllArcs); err != nil {
